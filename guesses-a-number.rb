@@ -3,13 +3,14 @@ maximum = 100
 user_answer = nil
 
 
-puts "Do you think a number between #{minimun} and #{maximum}? Answer (y/n):"
-user_answer = gets.chomp
+  puts "Do you think a number between #{minimun} and #{maximum}? press enter to start"
+  return user_answer = gets
 
-if  user_answer == "y"
+
+if  user_answer == "\n"
   loop do
-    guess_number = ((maximum - minimun)/2) + minimun
 
+    guess_number = ((maximum - minimun)/2) + minimun
     puts "Is your number #{guess_number}? Answer (y/n):"
     user_answer = gets.chomp
     if user_answer == "y"
@@ -29,9 +30,5 @@ if  user_answer == "y"
       puts "Try again with y or n!"
     end
   end
-elsif user_answer == "n"
-  puts "You don't want to play!"
 
-else
-  puts "Try again with y or n!"
 end
